@@ -1,8 +1,19 @@
 # Changelog
 
+## 7.0.0
+
+### Major Changes
+
+- [`a07d261`](https://github.com/dotansimha/graphql-code-generator-community/commit/a07d2610cdd0c3a64bbbc2b4ceaaa272fe0329e6)
+  Thanks [@davedbase](https://github.com/davedbase)! - Added `solid-urql` and `solidstart-urql`
+  plugins to the codegen library. The plugins generate fully typed Solid primitives for URQL,
+  including `createQuery`, `createMutation`, and `createSubscription`. Both versions for Solid
+  (client-side) and SolidStart (SSR framework) are provided.
+
 ## [1.0.0] - 2026-01-13
 
 ### Added
+
 - Initial release of GraphQL Code Generator plugin for SolidStart and URQL
 - Support for generating typed query functions using `createQuery` from `@urql/solid-start`
 - Support for generating typed mutation functions using `createMutation` from `@urql/solid-start`
@@ -12,6 +23,7 @@
 - Comprehensive documentation with correct SolidStart and URQL API usage
 
 ### Features
+
 - Generates query functions that wrap `@urql/solid-start`'s `createQuery` primitive
 - Generates mutation functions that wrap `@urql/solid-start`'s `createMutation` primitive
 - Query, mutation, and subscription generation
@@ -22,13 +34,16 @@
 - Automatic kebab-case cache key generation for queries
 
 ### API Design
+
 - Query primitives named `queryOperationName` (e.g., `queryGetUser`, `queryGetPosts`)
-- Mutation action factories named `actionOperationName` (e.g., `actionCreateUser`, `actionUpdateUser`)
+- Mutation action factories named `actionOperationName` (e.g., `actionCreateUser`,
+  `actionUpdateUser`)
 - Subscription helpers named `useSubscriptionOperationName` (e.g., `useSubscriptionOnUserUpdated`)
 - Compatible with SolidStart's `createAsync` primitive for queries
 - Mutation primitives return factory functions for component-level usage
 
 ### Design Decisions
+
 - Generates both Query and Mutation primitives
 - Subscriptions not generated (use `createSubscription` directly)
 - Uses `@urql/solid-start` as the default import source

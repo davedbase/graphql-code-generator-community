@@ -1,6 +1,6 @@
 {
   "name": "@graphql-codegen/typescript-solid-urql",
-  "version": "6.1.1",
+  "version": "7.0.0",
   "description": "GraphQL Code Generator plugin for generating typed SolidJS URQL hooks",
   "repository": {
     "type": "git",
